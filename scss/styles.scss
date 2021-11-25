@@ -2,10 +2,6 @@
 
 body {
     @include flexCenter(column);
-    background-image: url(../images/bg-pattern-top.svg), url(../images/bg-pattern-bottom.svg);
-    background-repeat: no-repeat,no-repeat;
-    background-size:200%,200%;
-    background-position: right calc(47vw + 7%) bottom calc(65vh - 15vw), left calc(40vw + -3%) top calc(72vh - 40vw);
     background-color: $background-body;
     color:$color-text;
     font-family: 'Kumbh Sans',sans-serif;
@@ -15,6 +11,17 @@ body {
 }
 
 .main {
+    display: flex;
+    width: 100%;
+    max-width:37.5rem;
+    height:100vh;
+    background-image: url(../images/bg-pattern-top.svg), url(../images/bg-pattern-bottom.svg);
+    background-repeat: no-repeat,no-repeat;
+    background-size:622px,622px;
+    background-position: -400px -370px, 180px 350px;
+}
+
+.container {
     @include flexCenter(column);
 
     background: url(../images/bg-pattern-card.svg) no-repeat;
@@ -83,5 +90,22 @@ body {
         margin-top:0.9rem;
         line-height: 1rem;
         letter-spacing: 1.5px;
+    }
+}
+
+@media screen and (min-width:840px) {
+    
+    .main {
+        width: 100%;
+        max-width:144rem;
+        height: 100vh;
+        background-image: url(../images/bg-pattern-top.svg), url(../images/bg-pattern-bottom.svg);
+        background-repeat: no-repeat, no-repeat;
+        background-size:978px, 978px;
+        background-position: -300px -500px, 700px 388px;
+    }
+
+    .container {
+        width:35rem;
     }
 }
